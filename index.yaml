@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  mychart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-01-08T16:16:17.678007+01:00"
+    description: A Helm chart for Kubernetes
+    digest: d8fe23b18ec08c6f9c740f876c0f50dbbf31d87a377da0638cf27acb4ff38df9
+    name: mychart
+    type: application
+    urls:
+    - https://Josca.github.io/k0rdent_helmcharts/mychart-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-01-08T16:16:17.677467+01:00"
