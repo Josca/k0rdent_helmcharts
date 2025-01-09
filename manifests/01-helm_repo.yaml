@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: k0rdent-extra
+  namespace: hmc-system
+  labels:
+    hmc.mirantis.com/managed: "true"
+spec:
+  interval: 10m0s
+  url: https://josca.github.io/k0rdent_helmcharts/charts/
