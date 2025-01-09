@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  dapr:
+  - apiVersion: v2
+    appVersion: 1.14.4
+    created: "2025-01-09T14:07:03.019598+01:00"
+    dependencies:
+    - name: dapr
+      repository: https://dapr.github.io/helm-charts/
+      version: 1.14.4
+    description: A Helm chart to refer the official dapr helm chart
+    digest: 464afb980311cb8cb3e5dbc98180df2a0b9fe2f7637a4698496ae8bd975acf58
+    name: dapr
+    type: application
+    urls:
+    - https://Josca.github.io/k0rdent_helmcharts/charts/dapr-1.14.4.tgz
+    version: 1.14.4
+generated: "2025-01-09T14:07:03.01798+01:00"
