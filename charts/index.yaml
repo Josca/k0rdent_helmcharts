@@ -9,7 +9,7 @@ entries:
       repository: https://dapr.github.io/helm-charts/
       version: 1.14.4
     description: A Helm chart to refer the official dapr helm chart
-    digest: 464afb980311cb8cb3e5dbc98180df2a0b9fe2f7637a4698496ae8bd975acf58
+    digest: 14a3b7dcdb25548a01aba70f9fb230722d447fbeefb52ae396fa6a3965fa5c88
     name: dapr
     type: application
     urls:
