@@ -22,9 +22,7 @@ jobs:
 
     - name: Package Helm Charts
       run: |
-        cd charts
-        helm dependency update dapr
-        helm package dapr
+        helm package ./charts/* --destination charts
 
     - name: Update Helm Repository Index
       run: |
