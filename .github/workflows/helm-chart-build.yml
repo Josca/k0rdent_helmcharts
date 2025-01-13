@@ -22,12 +22,18 @@ jobs:
 
     - name: Package Helm Charts
       run: |
-        helm package ./charts/* --destination charts
+        cd charts
+        for chart in ./*; do
+          if [ -f "$chart/Chart.yaml" ]; then
+            helm dependency update "$chart"
+            helm package "$chart"
+          fi
+        done
 
     - name: Update Helm Repository Index
       run: |
         helm repo index charts --url https://Josca.github.io/k0rdent_helmcharts/charts
-    
+
     - name: Remove .gitignore to include generated files to gh-pages
       run: |
         rm -f .gitignore
