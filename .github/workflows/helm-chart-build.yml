@@ -30,6 +30,10 @@ jobs:
       run: |
         helm repo index charts --url https://Josca.github.io/k0rdent_helmcharts/charts
     
+    - name: Remove .gitignore to include generated files to gh-pages
+      run: |
+        rm -f .gitignore
+
     - name: Publish to "gh-pages" branch
       uses: peaceiris/actions-gh-pages@v3
       with:
