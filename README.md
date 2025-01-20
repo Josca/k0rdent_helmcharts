@@ -12,7 +12,7 @@ kubectl get servicetemplate -A # Check service templates
 ## Use it in managed cluster
 Update your managed cluster manifest `spec.services` section, e.g.:
 ~~~yaml
-apiVersion: hmc.mirantis.com/v1alpha1
+apiVersion: k0rdent.mirantis.com/v1alpha1
 kind: ClusterDeployment
 # ...
 spec:
