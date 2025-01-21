@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dapr-dashboard
+  namespace: dapr-system
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: 'localhost'
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: dapr-dashboard
+            port:
+              number: 8080
