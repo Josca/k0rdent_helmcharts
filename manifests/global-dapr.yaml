@@ -10,5 +10,5 @@ spec:
     priority: 1000
     services:
       - template: dapr-1-14-4
-        name: dapr
-        namespace: dapr
+        name: managed-dapr
+        namespace: dapr-system
