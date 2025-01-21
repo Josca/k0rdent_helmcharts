@@ -3,13 +3,16 @@ entries:
   dapr:
   - apiVersion: v2
     appVersion: 1.14.4
-    created: "2025-01-20T16:35:51.431825038Z"
+    created: "2025-01-21T11:21:40.724218156Z"
     dependencies:
     - name: dapr
       repository: https://dapr.github.io/helm-charts/
       version: 1.14.4
+    - name: dapr-dashboard
+      repository: https://dapr.github.io/helm-charts/
+      version: 0.15.0
     description: A Helm chart to refer the official dapr helm chart
-    digest: 434597ad2c3ac0a1efb668f83a89076217b4a5013cb3e494af41bcd6dba766da
+    digest: 81e6f197b4dc82f78e89580b19153b83aab9317069f8339e264a5e4d4f09a969
     name: dapr
     type: application
     urls:
@@ -18,16 +21,16 @@ entries:
   ingress-nginx:
   - apiVersion: v2
     appVersion: 1.11.3
-    created: "2025-01-20T16:35:51.43594627Z"
+    created: "2025-01-21T11:21:40.728794141Z"
     dependencies:
     - name: ingress-nginx
       repository: https://kubernetes.github.io/ingress-nginx
       version: 4.11.3
     description: A Helm chart to refer the official ingress-nginx helm chart
-    digest: f2e67541ba8df57ae5bb0a18e3207e1213c14cf72ac78991c62e8f3ab10c41d0
+    digest: 922845f41be226b222413d2f2b0854afbcfab3b135433ce5cf7e9d87a96dc40f
     name: ingress-nginx
     type: application
     urls:
     - https://Josca.github.io/k0rdent_helmcharts/charts/ingress-nginx-4.11.3.tgz
     version: 4.11.3
-generated: "2025-01-20T16:35:51.427918971Z"
+generated: "2025-01-21T11:21:40.721727723Z"
