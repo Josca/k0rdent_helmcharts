@@ -27,6 +27,7 @@ spec:
 
 You can also use it in `MultiClusterService`:
 ~~~bash
+kubectl apply -f manifests/global-nginx-ingress-f5.yaml
 kubectl apply -f manifests/global-dapr.yaml
 kubectl get multiclusterservices
 # NAME             AGE

@@ -14,14 +14,15 @@ helm search repo k0rdent-extra # check repo content
 
 ## Usage
 
-### Install 'dapr'
-Install `dapr` using helm chart:
-~~~bash
-helm install dapr k0rdent-extra/dapr --namespace dapr-system --create-namespace
-~~~
-
 ### Install 'nginx-ingress-f5'
 Install `nginx-ingress-f5` using helm chart:
 ~~~bash
 helm install nginx-ingress-f5 k0rdent-extra/nginx-ingress-f5 --namespace nginx-ingress-f5 --create-namespace --set nginx-ingress.controller.hostPort.enable=true
+~~~
+
+### Install 'dapr'
+Install `dapr` using helm chart:
+~~~bash
+helm install dapr k0rdent-extra/dapr --namespace dapr-system --create-namespace
+kubectl apply -f testing_cluster/ingress-dapr.yaml
 ~~~
