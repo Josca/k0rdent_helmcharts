@@ -3,7 +3,7 @@ entries:
   dapr:
   - apiVersion: v2
     appVersion: 1.14.4
-    created: "2025-01-21T17:35:32.120978953Z"
+    created: "2025-01-22T13:04:00.954567017Z"
     dependencies:
     - name: dapr
       repository: https://dapr.github.io/helm-charts/
@@ -12,7 +12,7 @@ entries:
       repository: https://dapr.github.io/helm-charts/
       version: 0.15.0
     description: A Helm chart to refer the official dapr helm chart
-    digest: 112f24439188c68635c8789c05537fc0c433cc665d859eece75add97b60814b1
+    digest: 9dc4c6a6aab9df0406b81fad1408cf41a03296591825e8c170c60f1626e5a266
     name: dapr
     type: application
     urls:
@@ -21,16 +21,34 @@ entries:
   nginx-ingress-f5:
   - apiVersion: v2
     appVersion: 2.0.0
-    created: "2025-01-21T17:35:32.123093256Z"
+    created: "2025-01-22T13:04:00.957481898Z"
     dependencies:
     - name: nginx-ingress
       repository: oci://ghcr.io/nginxinc/charts
       version: 2.0.0
     description: A Helm chart to refer the official F5 nginx-ingress helm chart
-    digest: 426d551ef2f45ea266252cbb4ea356531099214f18066fcc765e14fd7a7cfa0d
+    digest: 28114887e6cd2cdcd3f7c91c17feafffeb32801de9e852559311c67e0f662733
     name: nginx-ingress-f5
     type: application
     urls:
     - https://Josca.github.io/k0rdent_helmcharts/charts/nginx-ingress-f5-2.0.0.tgz
     version: 2.0.0
-generated: "2025-01-21T17:35:32.118252941Z"
+  tetrate-istio:
+  - apiVersion: v2
+    appVersion: 1.24.2-tetrate1
+    created: "2025-01-22T13:04:00.961262396Z"
+    dependencies:
+    - name: base
+      repository: https://tis.tetrate.io/charts
+      version: 1.24.20001
+    - name: istiod
+      repository: https://tis.tetrate.io/charts
+      version: 1.24.20001
+    description: A Helm chart to refer the official Tetrate Istio helm charts
+    digest: 2e8c37c00c3aa8acf512e9e3b40ba67105ea12f7f1d4abdd2845497c188fdb3d
+    name: tetrate-istio
+    type: application
+    urls:
+    - https://Josca.github.io/k0rdent_helmcharts/charts/tetrate-istio-1.24.20001.tgz
+    version: 1.24.20001
+generated: "2025-01-22T13:04:00.952007859Z"
