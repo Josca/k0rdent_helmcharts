@@ -28,14 +28,22 @@ jobs:
         cd charts
         for chart in ./*; do
           if [ -f "$chart/Chart.yaml" ]; then
+            # Update dependencies and package the chart
             helm dependency update "$chart"
             helm package "$chart"
 
-            # Check ${{ github.repository_owner }} value
-            echo "github.repository_owner: ${{ github.repository_owner }}"
+            # Extract the chart package name
+            CHART_PACKAGE=$(ls -1 $chart-*.tgz)
+            REPO_ADDRESS="oci://ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}/charts"
+            REPO_ADDRESS_VALID=$(echo "$REPO_ADDRESS" | tr '[:upper:]' '[:lower:]')
 
-            # Převedení na OCI a publikace do GHCR
-            helm push "$(ls -1 $chart-*.tgz)" oci://ghcr.io/${{ github.repository_owner }}/charts
+            # Debugging output (optional)
+            echo "Chart package: $CHART_PACKAGE"
+            echo "Pushing to: $REPO_ADDRESS_VALID"
+
+            # Push the packaged Helm chart to GHCR
+            echo "helm push $CHART_PACKAGE $REPO_ADDRESS_VALID"
+            helm push "$CHART_PACKAGE" "$REPO_ADDRESS_VALID"
           fi
         done
   
