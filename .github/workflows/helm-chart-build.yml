@@ -31,8 +31,11 @@ jobs:
             helm dependency update "$chart"
             helm package "$chart"
 
+            # Check ${{ github.repository_owner }} value
+            echo "github.repository_owner: ${{ github.repository_owner }}"
+
             # Převedení na OCI a publikace do GHCR
-            helm push "$(ls -1 $chart-*.tgz)" oci://ghcr.io/${{ github.repository_owner }}/helm
+            helm push "$(ls -1 $chart-*.tgz)" oci://ghcr.io/${{ github.repository_owner }}/charts
           fi
         done
   
